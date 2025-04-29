@@ -7,6 +7,8 @@ import ScrollDownButton from './components/ScrollDownButton.jsx';
 import EducacaoTech from './components/EducationSection.jsx';
 import ScrollToTop from './components/ScrollToTop.jsx'
 import ParallaxImage from './components/ParallaxImage.jsx'
+import Estrutura from './components/Estrutura.jsx'
+import SaberMais from './components/SaberMais.jsx'
 import { GlobalStyle } from "./styles/GlobalStyle.jsx";
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
       <EducacaoTech />
       <ScrollToTop />
       <ParallaxImage />
+      <Estrutura />
+      <SaberMais />
     </>
   );
 }

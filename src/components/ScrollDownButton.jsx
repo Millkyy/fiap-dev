@@ -10,6 +10,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
 @media (max-width: 480px){
     display: none;

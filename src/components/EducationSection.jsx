@@ -5,7 +5,7 @@ import FiapNext from '../assets/imgs/fiap-next.jpg';
 //Educação e Tech
 const Section = styled.section`
   width: 100%;
-  height:110vh; 
+  min-height:100vh; 
   padding: 7%; 
   font-weight: 200;
   font-size: 20px;
@@ -16,7 +16,7 @@ const Section = styled.section`
 @media (max-width: 480px){
     width: 101%;
     font-size: 18px;
-    height:170vh;
+    min-height:170vh;
 }
 `;
 
@@ -46,6 +46,7 @@ const ContentWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 70px;
+    padding-bottom: 50px;
 }
 `;
 

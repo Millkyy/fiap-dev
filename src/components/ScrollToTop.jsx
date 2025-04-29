@@ -14,11 +14,18 @@ const BackToTopButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 9999;
 
 
   opacity: ${(props) => (props.visible ? 1 : 0)};
   pointer-events: ${(props) => (props.visible ? 'all' : 'none')};
   transition: opacity 0.4s ease;
+
+
+@media (max-width: 480px){
+    bottom: 5vh;
+    right: 5vw;
+}
 `;
 
 const ScrollToTop = () => {

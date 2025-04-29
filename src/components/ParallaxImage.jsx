@@ -17,6 +17,7 @@ const ParallaxSection = styled.section`
 
 @media (max-width: 480px){
     width: 101%;
+    height: 50vh;
 }
 `;
 

@@ -11,6 +11,14 @@ export const GlobalStyle = createGlobalStyle`
     font-style: normal;
 }
 
+//Gotham Bold
+@font-face {
+	font-family: 'Gotham';
+    src: url('/src/assets/fonts/gotham/GothamHTF-Bold.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 //Gotham Book
 @font-face {
     font-family: 'Gotham';

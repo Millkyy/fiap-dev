@@ -5,7 +5,7 @@ import backgroundHero from "../assets/imgs/header.jpg";
 //background image
 const HeroContainer = styled.section`
   width: 100%; 
-  height: 95vh;
+  min-height: 95vh;
   background: 
     linear-gradient(to right, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0.5) 65%),
     url(${backgroundHero}) no-repeat center/cover;
@@ -17,7 +17,7 @@ const HeroContainer = styled.section`
     width: 101%; 
     padding-top: 15vh;
     align-items: start;
-    height: 70vh;
+    min-height: 70vh;
     background: 
       linear-gradient(to right, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0.5) 65%),
       linear-gradient(to top, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0.1) 80%),
