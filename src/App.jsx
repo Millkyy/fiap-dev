@@ -16,10 +16,10 @@ function App() {
       <Header />
       <HeroSection />
       <EducacaoTech />
-      <ScrollToTop />
       <ParallaxImage />
       <AccordionSection />
       <HoverSection />
+      <ScrollToTop />
     </>
   );
 }

@@ -75,7 +75,7 @@ const RightContent = styled.div`
     margin: 30px 0;
   }
     
-  .barra {
+  .slash {
     color: #ED145B;
     font-weight: bold;
   }
@@ -170,7 +170,7 @@ export function EducacaoTech() {
             </p>
 
             <div className="category">
-                <span className="barra">/</span> Tecnologia e Desenvolvimento
+                <span className="slash">/</span> Tecnologia e Desenvolvimento
             </div>
                 <ul>
                     <li>- Desenvolvimento de Software</li>
@@ -180,11 +180,11 @@ export function EducacaoTech() {
                 </ul>
 
             <div className="category">
-                <span className="barra">/</span> UX/UI, Marketing Digital
+                <span className="slash">/</span> UX/UI, Marketing Digital
             </div>
 
             <div className="category">
-                <span className="barra">/</span> Metodologias e Gestão
+                <span className="slash">/</span> Metodologias e Gestão
             </div>
 
             <p>
