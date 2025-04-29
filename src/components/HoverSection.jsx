@@ -3,17 +3,17 @@ import styled from 'styled-components';
 
 // Container principal
 const ContactSection = styled.section`
-  min-height: 80vh;
+  min-height: 700px;
   background: #101010;
   color: #ACC1CC;
   text-align: center;
   align-content: flex-end;
-  padding: 30vh 0;
+  padding: 240px 0;
   font-weight: 500;
 
 @media (max-width: 480px){
-    min-height: 65vh;
-    padding: 15vh 0;
+    min-height: 500px;
+    padding: 120px 0;
 }
 `;
 
@@ -21,6 +21,7 @@ const ContactSection = styled.section`
 const Title = styled.h2`
   font-size: 80px;
   margin-bottom: 5rem;
+  text-transform: uppercase;
 
 @media (max-width: 480px){
     padding: 0 100px;
@@ -52,13 +53,13 @@ const ContactButton = styled.button`
 }
 `;
 
-const SaberMais = () => {
+const HoverSection = () => {
   return (
     <ContactSection>
-      <Title>QUER SABER MAIS?</Title>
+      <Title>Quer saber mais?</Title>
       <ContactButton>Entre em contato</ContactButton>
     </ContactSection>
   );
 };
 
-export default SaberMais;
+export default HoverSection;

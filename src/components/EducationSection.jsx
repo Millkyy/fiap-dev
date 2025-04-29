@@ -5,8 +5,8 @@ import FiapNext from '../assets/imgs/fiap-next.jpg';
 //Educação e Tech
 const Section = styled.section`
   width: 100%;
-  min-height:100vh; 
-  padding: 7%; 
+  min-height: 900px; 
+  padding: 100px; 
   font-weight: 200;
   font-size: 20px;
   text-align: justify;
@@ -16,7 +16,8 @@ const Section = styled.section`
 @media (max-width: 480px){
     width: 101%;
     font-size: 18px;
-    min-height:170vh;
+    min-height: 1400px;
+    padding: 50px; 
 }
 `;
 
@@ -27,6 +28,7 @@ const Title = styled.h1`
   padding-bottom: 90px;
   text-align: left;
   color: #000000;
+  text-transform: uppercase;
 
 @media (max-width: 480px){
     font-size: 40px;
@@ -59,7 +61,7 @@ const LeftContent = styled.div`
 //Conteúdo da Direita
 const RightContent = styled.div`
   flex: 1;
-  max-width: 600px;
+  max-width: 650px;
 
   li {
     color: #ED145B;
@@ -149,7 +151,7 @@ export function EducacaoTech() {
         </ModalOverlay>
     )}
 
-      <Title>EDUCAÇÃO E TECH</Title>
+      <Title>Educação e Tech</Title>
       <ContentWrapper>
         <LeftContent>
             <p>

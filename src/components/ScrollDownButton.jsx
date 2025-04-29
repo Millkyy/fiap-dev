@@ -22,6 +22,7 @@ const ScrollDown = styled.div`
   font-size: 12px;
   color: #AFAFAF;
   font-weight: 500;
+  text-transform: uppercase;
 `;
 
 //Cículo do botão
@@ -44,7 +45,7 @@ const ScrollDownButton = () => {
   return (
       <Container>
       <ScrollDown>
-        SCROLL DOWN
+        Scroll down
         </ScrollDown>
         <Button onClick={scrollToNextSection}>
         <svg width="22" height="10" viewBox="0 0 22 10" fill="none">

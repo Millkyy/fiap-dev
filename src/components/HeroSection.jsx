@@ -21,7 +21,7 @@ const FadeInSection = styled.section`
 //background image
 const HeroContainer = styled.section`
   width: 100%; 
-  min-height: 95vh;
+  min-height: 850px;
   background: 
     linear-gradient(to right, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0.5) 65%),
     url(${backgroundHero}) no-repeat center/cover;
@@ -31,9 +31,9 @@ const HeroContainer = styled.section`
 
 @media (max-width: 480px){
     width: 101%; 
-    padding-top: 15vh;
+    padding-top: 120px;
     align-items: start;
-    min-height: 70vh;
+    min-height: 600px;
     background: 
       linear-gradient(to right, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0.5) 65%),
       linear-gradient(to top, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0.1) 80%),
@@ -43,12 +43,13 @@ const HeroContainer = styled.section`
 
 //Conteúdo
 const Content = styled.div`
-  padding-left: 7%;
+  padding-left: 100px;
   font-weight: 500;
   font-size: 80px;
 
 @media (max-width: 480px){
     font-size: 40px;
+    padding-left: 50px;
 }
 `;
 
@@ -56,6 +57,7 @@ const Content = styled.div`
 const Title = styled.h1`
   -webkit-text-stroke: 2px #ED145B;
   color: transparent;
+  text-transform: uppercase;
 
   animation: ${fadeIn} 0.8s ease forwards;
   animation-delay: 0.2s;
@@ -69,7 +71,7 @@ const Title = styled.h1`
 const Subtitle = styled.h2`
   color: #ACC1CC;
   text-transform: uppercase;
-  padding: 1.5rem 0;
+  padding: 20px 0;
 
   animation: ${fadeIn} 1s ease forwards;
   animation-delay: 0.2s;
@@ -92,11 +94,10 @@ const Paragraph = styled.p`
 @media (max-width: 480px){
     font-size: 18px;
     max-width: 415px;
-    position: absolute;
-    bottom: 40vh;
+    padding-top: 100px;
 
     animation: ${fadeIn} 1.5s ease forwards;
-    animation-delay: 0.6s;
+    animation-delay: 0.2s;
 }
 `;
 
@@ -106,8 +107,8 @@ const HeroSection = () => {
     <HeroContainer>
       <Content>
       <FadeInSection>
-        <Title>A MAIOR FACULDADE</Title>
-        <Subtitle>DE TECNOLOGIA</Subtitle>
+        <Title>A maior faculdade</Title>
+        <Subtitle>de tecnologia</Subtitle>
         <Paragraph>
           Referência em tecnologia e inovação no Brasil, a FIAP é uma faculdade que
           prepara profissionais para o futuro, com um ensino prático, professores

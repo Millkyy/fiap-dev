@@ -5,8 +5,8 @@ import styled from 'styled-components';
 const Section = styled.section`
   position: relative;
   width: 100%; 
-  min-height: 90vh;
-  padding: 7%;
+  min-height: 800px;
+  padding: 100px;
   background: #101010;
   color: #ACC1CC;
   display: flex;
@@ -15,15 +15,15 @@ const Section = styled.section`
 
   @media (max-width: 480px){
     width: 101%;
+    padding: 50px;
     font-size: 16px;
-    min-height:100vh;
 }
 `;
 
 //Brilho lateral azulado
 const SideGlow = styled.div`
   position: absolute;
-  width: 10vw;
+  width: 100px;
   height: 500px;
   background: radial-gradient(circle, rgba(54,103,153,0.9) 0%, transparent 90%);
   filter: blur(90px);
@@ -43,6 +43,7 @@ const Title = styled.h1`
   font-size: 80px;
   font-weight: 500;
   margin-bottom: 5rem;
+  text-transform: uppercase;
 
 @media (max-width: 480px){
     font-size: 40px;
@@ -136,7 +137,7 @@ const items = [
   }
 ];
 
-const Estrutura = () => {
+const AccordionSection = () => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggle = (index) => {
@@ -147,7 +148,7 @@ const Estrutura = () => {
     <Section>
         <SideGlow position="left" />
         <SideGlow position="right" />
-      <Title>NOSSA ESTRUTURA</Title>
+      <Title>Nossa Estrutura</Title>
       {items.map((item, index) => (
         <AccordionItem key={index}>
             <Header onClick={() => toggle(index)}>
@@ -163,4 +164,4 @@ const Estrutura = () => {
   );
 };
 
-export default Estrutura;
+export default AccordionSection;
