@@ -1,6 +1,22 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import backgroundHero from "../assets/imgs/header.jpg";
+
+//Animação de FadeIn
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
+const FadeInSection = styled.section`
+  animation: ${fadeIn} 1s ease-in-out;
+`;
 
 //background image
 const HeroContainer = styled.section`
@@ -41,6 +57,9 @@ const Title = styled.h1`
   -webkit-text-stroke: 2px #ED145B;
   color: transparent;
 
+  animation: ${fadeIn} 0.8s ease forwards;
+  animation-delay: 0.2s;
+
 @media (max-width: 480px){
     font-size: 40px;
 }
@@ -51,6 +70,9 @@ const Subtitle = styled.h2`
   color: #ACC1CC;
   text-transform: uppercase;
   padding: 1.5rem 0;
+
+  animation: ${fadeIn} 1s ease forwards;
+  animation-delay: 0.2s;
 
 @media (max-width: 480px){
     font-size: 36px;
@@ -64,11 +86,17 @@ const Paragraph = styled.p`
   max-width: 750px;
   color: #AFAFAF;
 
+  animation: ${fadeIn} 1.2s ease forwards;
+  animation-delay: 0.2s;
+
 @media (max-width: 480px){
     font-size: 18px;
     max-width: 415px;
     position: absolute;
     bottom: 40vh;
+
+    animation: ${fadeIn} 1.5s ease forwards;
+    animation-delay: 0.6s;
 }
 `;
 
@@ -77,6 +105,7 @@ const HeroSection = () => {
   return (
     <HeroContainer>
       <Content>
+      <FadeInSection>
         <Title>A MAIOR FACULDADE</Title>
         <Subtitle>DE TECNOLOGIA</Subtitle>
         <Paragraph>
@@ -84,6 +113,7 @@ const HeroSection = () => {
           prepara profissionais para o futuro, com um ensino prático, professores
           atuantes no mercado e desafios reais que conectam os alunos às grandes empresas.
         </Paragraph>
+      </FadeInSection>
       </Content>
     </HeroContainer>
   );
