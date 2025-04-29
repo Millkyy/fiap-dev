@@ -26,14 +26,16 @@ const HeroContainer = styled.section`
     linear-gradient(to right, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0.5) 65%),
     url(${backgroundHero}) no-repeat center/cover;
   display: flex;
-  align-items: center;
-  justify-content: left;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  padding: 50px;
 
 @media (max-width: 480px){
     width: 101%; 
-    padding-top: 120px;
     align-items: start;
     min-height: 600px;
+    padding: 50px;
     background: 
       linear-gradient(to right, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0.5) 65%),
       linear-gradient(to top, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0.1) 80%),
@@ -43,13 +45,14 @@ const HeroContainer = styled.section`
 
 //Conteúdo
 const Content = styled.div`
-  padding-left: 100px;
   font-weight: 500;
   font-size: 80px;
+  padding: 50px 100px 50px 50px;
 
 @media (max-width: 480px){
     font-size: 40px;
-    padding-left: 50px;
+    padding: 5px;
+    
 }
 `;
 
@@ -58,12 +61,14 @@ const Title = styled.h1`
   -webkit-text-stroke: 2px #ED145B;
   color: transparent;
   text-transform: uppercase;
+  padding-top: 150px;
 
   animation: ${fadeIn} 0.8s ease forwards;
   animation-delay: 0.2s;
 
 @media (max-width: 480px){
     font-size: 40px;
+    padding-top: 50px;
 }
 `;
 
@@ -101,8 +106,45 @@ const Paragraph = styled.p`
 }
 `;
 
+//Botão de Scroll Down
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding-top: 100px;
+
+@media (max-width: 480px){
+    display: none;
+}
+`;
+
+//Título do botão
+const ScrollDown = styled.div`
+  font-size: 12px;
+  color: #AFAFAF;
+  font-weight: 500;
+  text-transform: uppercase;
+`;
+
+//Cículo do botão
+const Button = styled.div`
+  padding: 1.1rem 0.75rem;
+  border: solid 1px white;
+  border-radius: 9999px;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+`;
+
 
 const HeroSection = () => {
+
+  const scrollToNextSection = () => {
+    window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+  };
+
   return (
     <HeroContainer>
       <Content>
@@ -116,6 +158,16 @@ const HeroSection = () => {
         </Paragraph>
       </FadeInSection>
       </Content>
+      <Container>
+        <ScrollDown>
+          Scroll down
+        </ScrollDown>
+        <Button onClick={scrollToNextSection}>
+          <svg width="22" height="10" viewBox="0 0 22 10" fill="none">
+            <path d="M1.00001 1L10.8039 9.33515L20.6078 1" stroke="#ACC1CC" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </Button>
+      </Container>
     </HeroContainer>
   );
 };
