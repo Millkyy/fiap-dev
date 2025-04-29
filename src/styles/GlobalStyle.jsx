@@ -35,6 +35,20 @@ export const GlobalStyle = createGlobalStyle`
     font-style: normal;
 }
 
+//Estilização da barra de scroll
+::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background:#49051b;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ED145B;
+    border-radius: 10px;
+  }
+
 //Reset CSS
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
