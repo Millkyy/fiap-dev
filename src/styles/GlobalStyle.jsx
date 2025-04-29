@@ -19,6 +19,13 @@ export const GlobalStyle = createGlobalStyle`
     font-style: normal;
 }
 
+//Roboto Regular
+@font-face {
+    font-family: 'Roboto';
+    src: url('/src/assets/fonts/roboto/roboto-regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
 
 //Reset CSS
 html, body, div, span, applet, object, iframe,

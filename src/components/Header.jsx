@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import logo from "../assets/svg/logo.svg";
 
+//Header
 const HeaderContainer = styled.header`
     position: fixed;
     top: 0;
@@ -14,6 +15,7 @@ const HeaderContainer = styled.header`
     z-index: 999;
 `;
 
+//Logo fiap
 const Logo = styled.img`
     height: 30%;
 `;

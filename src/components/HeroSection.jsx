@@ -14,9 +14,14 @@ const HeroContainer = styled.section`
   justify-content: left;
 
 @media (max-width: 480px){
+    width: 101%; 
     padding-top: 15vh;
     align-items: start;
     height: 70vh;
+    background: 
+      linear-gradient(to right, rgba(0, 0, 0, 1) 35%, rgba(0, 0, 0, 0.5) 65%),
+      linear-gradient(to top, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0.1) 80%),
+      url(${backgroundHero}) no-repeat center/cover;
 }
 `;
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
+//Barra de progresso 
 const ProgressBar = styled.div`
   position: fixed;
   top: 0;
@@ -20,7 +21,7 @@ function Timeline() {
     const height =
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight;
-    const scrolled = Math.round((winScroll / height) * 100); // <-- aqui arredonda
+    const scrolled = Math.round((winScroll / height) * 100);
     setScroll(scrolled);
   };
 
