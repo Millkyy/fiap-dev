@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import FiapNext from '../assets/imgs/fiap-next.jpg';
 
@@ -85,6 +85,7 @@ const Image = styled.img`
   width: 100%;
   max-width: 700px;
   margin: 40px auto 10px;
+  cursor: pointer;
 `;
 
 //Descrição da imagem
@@ -95,9 +96,59 @@ const Caption = styled.figcaption`
   font-family: 'Roboto', sans-serif;
 `;
 
+// Modal
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+`;
+
+//Modal Image
+const ModalImage = styled.img`
+  width: 50vw;
+  cursor: pointer;
+  z-index: 99999;
+
+@media (max-width: 480px){
+    width: 100%;
+}
+`;
+
+//Botão para fechar o modal
+const CloseButton = styled.button`
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 28px;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 9999999;
+
+  &:hover {
+    color: #ED145B;
+  }
+`;
+
 export function EducacaoTech() {
+  const [isModalOpen, setIsModalOpen] = useState(false); 
   return (
     <Section>
+    {isModalOpen && (
+        <ModalOverlay onClick={() => setIsModalOpen(false)}>
+          <CloseButton onClick={() => setIsModalOpen(false)}>X</CloseButton>
+          <ModalImage src={FiapNext} alt="Imagem ampliada" />
+        </ModalOverlay>
+    )}
+
       <Title>EDUCAÇÃO E TECH</Title>
       <ContentWrapper>
         <LeftContent>
@@ -106,7 +157,7 @@ export function EducacaoTech() {
             </p>
 
             <figure>
-                <Image src={FiapNext} alt="FIAP NEXT" />
+                <Image src={FiapNext} alt="FIAP NEXT" onClick={() => setIsModalOpen(true)} />
                 <Caption>Figura 1 – Logotipo da FIAP NEXT</Caption>
             </figure>
         </LeftContent>
