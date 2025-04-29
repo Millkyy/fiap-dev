@@ -5,7 +5,7 @@ import backgroundImage from '../assets/imgs/break-image.jpg';
 //Break Image
 const ParallaxSection = styled.section`
   width: 100%;
-  height: 70vh;
+  height:500px;
   background-image: url(${backgroundImage});
   background-attachment: fixed;
   background-position: center;
@@ -14,11 +14,6 @@ const ParallaxSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-
-@media (max-width: 480px){
-    width: 101%;
-    height: 50vh;
-}
 `;
 
 const ParallaxImage = () => {

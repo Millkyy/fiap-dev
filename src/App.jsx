@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Header from './components/Header.jsx';
-import Timeline from './components/Timeline.jsx';
 import HeroSection from './components/HeroSection.jsx';
 import ScrollDownButton from './components/ScrollDownButton.jsx';
 import EducacaoTech from './components/EducationSection.jsx';
@@ -16,7 +15,6 @@ function App() {
     <>
       <GlobalStyle />
       <Header />
-      <Timeline />
       <HeroSection />
       <ScrollDownButton />
       <EducacaoTech />
