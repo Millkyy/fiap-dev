@@ -140,7 +140,7 @@ const CloseButton = styled.button`
   }
 `;
 
-export function EducacaoTech() {
+export function EducationTech() {
   const [isModalOpen, setIsModalOpen] = useState(false); 
   return (
     <Section>
@@ -197,4 +197,4 @@ export function EducacaoTech() {
   );
 }
 
-export default EducacaoTech;
+export default EducationTech;
